@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+</head>
+
+<body>
+    ##渲染页面
+    <div id='app'>
+        {{message}}
+
+    </div>
+    <div id='app-2'>
+        <!-- 给span加一个message title -->
+        <!-- v-bind 绑定指令-->
+        <span v-bind:title="message">
+            Hover your mouse over me for a few seconds to see my dynmically nound title!
+            {{message}}
+
+
+
+        </span>
+
+    </div>
+    <div id='app-3'>
+        <!-- v-if dom元素控制增加删除-->
+        <p v-if='seen'>
+            Now you see me
+
+        </p>
+
+    </div>
+    <div id='app-4'>
+        <ol>
+            <li v-for='todo in todos'>
+                {{todo.text}}
+            </li>
+        </ol>
+
+    </div>
+
+
+<script src='../js/js/index.js'></script>
+</body>
+</html>
